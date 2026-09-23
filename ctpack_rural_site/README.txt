@@ -1,4 +1,4 @@
-C-TPACK RURAL IA — PROTOTIPO WEB
+C-TPACK RURAL IA — PLATAFORMA WEB
 
 Archivo principal: index.html
 
@@ -7,13 +7,14 @@ Características:
 - Funciona sin conexión una vez descargado.
 - No usa librerías, fuentes ni servicios externos.
 - Incluye interacción del modelo C-TPACK.
-- Incluye simuladores locales del portafolio offline: guía, rúbrica, retroalimentación y búsqueda de demostración.
+- Incluye herramientas locales para guía, rúbrica, retroalimentación y búsqueda de demostración.
 - Incluye lista ética, ficha de gobernanza y bitácora local de comunidad de práctica.
+- Integra imágenes y escenarios visuales relacionados con aula rural, planeación docente y colaboración profesional.
 - Los datos de la bitácora se guardan solo en localStorage del navegador.
-- Ninguna función de este prototipo envía datos a internet ni ejecuta un modelo real de IA.
+- Ninguna función envía datos a internet ni ejecuta por sí sola un modelo externo de IA.
 
-Base académica:
-"Modelo didáctico C-TPACK para la apropiación crítica de la inteligencia artificial en la formación del docente rural en el nivel educativo primario de Montería", 2026.
+Enfoque:
+La plataforma integra conocimiento tecnológico, pedagógico y disciplinar con un eje crítico y un eje territorial para apoyar decisiones docentes responsables, contextualizadas y viables en educación primaria rural.
 
 Nota:
-Este entregable convierte los componentes explícitos de la tesis en una interfaz demostrativa. La funcionalidad de generación es una simulación determinística y no reemplaza la validación por juicio de expertos ni la aplicación piloto prevista en el estudio.
+Las funciones de generación incluidas son simuladores locales de apoyo y requieren revisión profesional docente.
