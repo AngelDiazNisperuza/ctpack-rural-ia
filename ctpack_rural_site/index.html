@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0b2f4f" />
-  <meta name="description" content="Prototipo web del modelo didáctico C-TPACK para la apropiación crítica de IA en la formación del docente rural de primaria en Montería." />
-  <title>C-TPACK Rural IA | Prototipo de formación docente</title>
+  <meta name="description" content="Plataforma web del modelo didáctico C-TPACK para la integración crítica de IA en la formación docente rural de primaria en Montería." />
+  <title>C-TPACK Rural IA | Plataforma de formación docente</title>
   <style>
     :root{
       --navy:#0b2f4f;
@@ -115,6 +115,12 @@
 
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .visuals{background:white}
+    .visual-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .visual-card{background:white;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 10px 28px rgba(16,44,67,.07)}
+    .visual-card img{width:100%;aspect-ratio:16/10;object-fit:cover}
+    .visual-card .copy{padding:18px 18px 20px}
+    .visual-card .copy p{color:var(--muted);font-size:.95rem;margin:0}
     .card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:0 8px 26px rgba(16,44,67,.06)}
     .card .icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:#edf6fb;color:var(--navy);margin-bottom:16px;font-size:1.1rem;font-weight:900}
     .card p{color:var(--muted);font-size:.95rem}
@@ -196,14 +202,14 @@
     @media (max-width:980px){
       .hero-grid,.model-layout,.tool-layout,.ethics-grid,.community-layout{grid-template-columns:1fr}
       .hero-grid{padding-top:55px}.hero-card{max-width:610px}
-      .grid-3{grid-template-columns:1fr 1fr}.grid-4,.steps,.validation-grid{grid-template-columns:1fr 1fr}
+      .grid-3,.visual-grid{grid-template-columns:1fr 1fr}.grid-4,.steps,.validation-grid{grid-template-columns:1fr 1fr}
       .navlinks{display:none;position:absolute;top:68px;left:18px;right:18px;background:white;border:1px solid var(--line);border-radius:16px;padding:10px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}
       .navlinks.open{display:flex}.menu-btn{display:grid;place-items:center}
     }
     @media (max-width:640px){
       .wrap{width:min(100% - 24px,var(--max))}
       section{padding:70px 0}.hero-grid{min-height:auto;padding:48px 0}
-      .grid-3,.grid-4,.steps,.validation-grid,.form-grid{grid-template-columns:1fr}
+      .grid-3,.grid-4,.steps,.validation-grid,.visual-grid,.form-grid{grid-template-columns:1fr}
       .section-head{align-items:start;flex-direction:column}.hero-card{padding:19px}
       .model-points{grid-template-columns:1fr}.footer-grid{flex-direction:column;align-items:flex-start}
       .brand span small{display:none}
@@ -230,14 +236,14 @@
     <section class="hero" id="inicio">
       <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow" style="color:#9edcf5">Prototipo de interfaz derivado de tesis doctoral</div>
+          <div class="eyebrow" style="color:#9edcf5">Plataforma de formación docente rural</div>
           <h1>Tecnología con criterio.<br><span class="accent">Pedagogía con territorio.</span></h1>
           <p class="lead">Un entorno de formación docente para integrar inteligencia artificial en primaria rural mediante conocimiento tecnológico, pedagógico y disciplinar, un eje crítico y un eje territorial.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#portafolio">Abrir portafolio offline</a>
             <a class="btn btn-secondary" href="#modelo">Explorar C-TPACK</a>
           </div>
-          <p class="small" style="color:#b8cfdd;margin-top:18px">Diseñado como prototipo offline-first: no requiere servicios externos para funcionar y no envía datos.</p>
+          <p class="small" style="color:#b8cfdd;margin-top:18px">Diseñado con enfoque offline-first: no requiere servicios externos para funcionar y no envía datos.</p>
         </div>
         <div class="hero-card" aria-label="Diagrama conceptual C-TPACK">
           <div class="signal">
@@ -259,12 +265,25 @@
     <section>
       <div class="wrap">
         <div class="section-head">
-          <div><div class="eyebrow">Qué resuelve</div><h2>La propuesta convertida en experiencia digital</h2><p class="section-copy">La tesis no plantea adoptar IA por novedad tecnológica. La convierte en una decisión profesional situada: qué herramienta usar, para qué contenido, con qué estrategia, bajo qué límites éticos y con qué recursos disponibles en la escuela rural.</p></div>
+          <div><div class="eyebrow">Qué resuelve</div><h2>La propuesta convertida en experiencia digital</h2><p class="section-copy">La plataforma presenta la integración de IA como una decisión profesional situada: qué herramienta usar, para qué contenido, con qué estrategia, bajo qué límites éticos y con qué recursos disponibles en la escuela rural.</p></div>
         </div>
         <div class="grid-3">
           <article class="card"><div class="icon">01</div><h3>Planear, mediar y evaluar</h3><p>El docente usa tecnología como apoyo pedagógico: planifica actividades, produce guías y rúbricas y revisa los resultados antes de usarlos.</p></article>
           <article class="card"><div class="icon">02</div><h3>Trabajar con baja conectividad</h3><p>La interfaz prioriza herramientas ligeras, trabajo local y recursos que siguen siendo útiles cuando la conexión es intermitente.</p></article>
           <article class="card"><div class="icon">03</div><h3>Proteger agencia y derechos</h3><p>La IA queda subordinada al juicio docente, con controles para sesgos, privacidad, minimización de datos y supervisión humana.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="visuals" id="experiencias">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Experiencias visuales</div><h2>Escenarios de uso del modelo</h2><p class="section-copy">Estas imágenes acompañan la plataforma con escenas alineadas con la formación docente rural, la planeación pedagógica y el trabajo colaborativo.</p></div>
+        </div>
+        <div class="visual-grid">
+          <article class="visual-card"><img src="rural-classroom.svg" alt="Docente y estudiantes trabajando con recursos locales y un equipo compartido en un aula rural"><div class="copy"><h3>Aula rural y mediación cercana</h3><p>La tecnología se integra como apoyo a la interacción, la explicación y el acompañamiento directo a los estudiantes.</p></div></article>
+          <article class="visual-card"><img src="planning-workspace.svg" alt="Espacio de planeación docente con materiales impresos, cuaderno y equipo portátil"><div class="copy"><h3>Planeación con criterio pedagógico</h3><p>El diseño de actividades parte de objetivos claros, revisión profesional y adaptación a condiciones reales del entorno escolar.</p></div></article>
+          <article class="visual-card"><img src="community-practice.svg" alt="Grupo de docentes compartiendo experiencias y estrategias alrededor de una mesa de trabajo"><div class="copy"><h3>Comunidad de práctica</h3><p>El modelo fortalece el intercambio entre docentes, la reflexión conjunta y la construcción de respuestas situadas.</p></div></article>
         </div>
       </div>
     </section>
@@ -290,7 +309,7 @@
     <section class="route" id="ruta">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="eyebrow">Ruta de construcción y validación</div><h2>Cuatro etapas que estructuran el modelo</h2><p class="section-copy">Esta secuencia corresponde a la lógica investigativa indicada en la tesis; aquí se representa como panel de seguimiento para el desarrollo del modelo, no como un curso cerrado.</p></div>
+          <div><div class="eyebrow">Ruta de construcción y validación</div><h2>Cuatro etapas que estructuran el modelo</h2><p class="section-copy">Esta secuencia organiza el desarrollo y la validación del modelo como panel de seguimiento, no como un curso cerrado.</p></div>
         </div>
         <div class="steps">
           <article class="step"><h3>Diagnóstico de necesidades</h3><p>Reconocer condiciones contextuales, tecnológicas y pedagógicas del profesorado rural antes de proponer soluciones.</p></article>
@@ -304,8 +323,8 @@
     <section class="portfolio" id="portafolio">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="eyebrow">Caja de herramientas offline</div><h2>Portafolio docente C-TPACK</h2><p class="section-copy">La tesis plantea un portafolio capaz de apoyar planeación, mediación y evaluación con baja conectividad. Este prototipo convierte esa idea en herramientas locales de demostración.</p></div>
-          <span class="offline-badge">100% local en este prototipo</span>
+          <div><div class="eyebrow">Caja de herramientas offline</div><h2>Portafolio docente C-TPACK</h2><p class="section-copy">El portafolio apoya planeación, mediación y evaluación con baja conectividad. Esta plataforma convierte ese enfoque en herramientas locales de demostración.</p></div>
+          <span class="offline-badge">100% local en esta plataforma</span>
         </div>
 
         <div class="tool-layout">
@@ -386,7 +405,7 @@
     <section class="validation" id="validacion">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="eyebrow" style="color:#9edcf5">Validación de la propuesta</div><h2>Qué debe comprobar el modelo antes de escalar</h2><p class="section-copy">La tesis plantea juicio de expertos y aplicación piloto. La interfaz refleja esos controles como criterios de revisión del prototipo, sin presentarlos como resultados ya validados.</p></div>
+          <div><div class="eyebrow" style="color:#9edcf5">Validación de la propuesta</div><h2>Qué debe comprobar el modelo antes de escalar</h2><p class="section-copy">El modelo incorpora juicio de expertos y aplicación piloto. La interfaz refleja esos controles como criterios de revisión, sin presentarlos como resultados ya validados.</p></div>
         </div>
         <div class="validation-grid">
           <article class="card"><div class="icon">P</div><h3>Pertinencia</h3><p>¿Responde a necesidades reales de docentes y escuelas rurales de Montería?</p></article>
@@ -400,7 +419,7 @@
     <section class="source-note">
       <div class="wrap">
         <div class="source-box">
-          <strong>Alcance de este entregable.</strong> Este sitio es un prototipo funcional de interfaz construido a partir de los componentes expresamente descritos en la tesis: C-TPACK, eje crítico, eje territorial, formación situada, comunidad de práctica, IA educativa, tecnologías de baja demanda, gobernanza de datos, portafolio offline y validación mediante expertos/piloto. Las funciones de “generación” incluidas aquí son simuladores locales para visualizar la propuesta; no sustituyen un motor de IA ni constituyen evidencia de efectividad del modelo.
+          <strong>Alcance de la plataforma.</strong> Este sitio reúne los componentes centrales del modelo C-TPACK: eje crítico, eje territorial, formación situada, comunidad de práctica, IA educativa, tecnologías de baja demanda, gobernanza de datos, portafolio offline y validación mediante expertos y piloto. Las funciones de “generación” incluidas aquí son simuladores locales para visualizar el funcionamiento del entorno; no sustituyen un motor de IA ni constituyen evidencia de efectividad por sí mismas.
         </div>
       </div>
     </section>
@@ -408,8 +427,8 @@
 
   <footer>
     <div class="wrap footer-grid">
-      <div><strong>C-TPACK Rural IA</strong> · Prototipo de interfaz académica</div>
-      <div>Basado en tesis doctoral · Montería, Colombia · 2026</div>
+      <div><strong>C-TPACK Rural IA</strong> · Plataforma de formación docente</div>
+      <div>Montería, Colombia · 2026</div>
     </div>
   </footer>
 
